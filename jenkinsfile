@@ -1,27 +1,10 @@
 pipeline {
-
-agent any
-
-stages {
-
-stage('install dependencies') {
- steps {
-   sh 'npm install'
-   }
-  }
-  
-  stage('test') {
-    steps {
-     sh 'echo "testing application"'
+    agent any
+    stages { 
+        stage('Example') {
+            steps {
+                echo 'Hello earth'
+            }
+        }
     }
-   }
-   
-     stage("Deploy nodejs application") {
-     steps {
-      sh 'echo "deploying application"'
-     }
-    
-   }   
-     }
-     
-   }
+}
